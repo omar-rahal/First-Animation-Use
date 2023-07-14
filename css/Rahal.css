@@ -323,20 +323,18 @@ ul {
 
 /* Start Mega Menue */
 .mega-menu {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   position: absolute;
-  top: calc(100% + 100px);
-  opacity: 0;
-  left: 0;
-  z-index: 1;
-  background-color: white;
   width: 100%;
-  padding: 50px;
-  border-bottom: 4px solid var(--main-color-alt);
+  left: 0;
+  padding: 30px;
+  background-color: white;
+  border-bottom: 3px solid var(--main-color);
   z-index: -1;
-  transition: 0.3s;
+  display: flex;
+  gap: 40px;
+  top: calc(100% + 50px);
+  opacity: 0;
+  transition: top var(--main-transition), opacity var(--main-transition);
 }
 
 .other-links:hover .mega-menu {
@@ -348,13 +346,8 @@ ul {
 @media (max-width: 767px) {
   .mega-menu {
     flex-direction: column;
-    height: calc(100vh - 122px);
-    margin-top: 1px;
-    padding: 15px 0;
-  }
-
-  .other-links:hover .mega-menu {
-    top: 90px;
+    gap: 0;
+    padding: 5px;
   }
 }
 
@@ -387,17 +380,9 @@ ul {
   margin-bottom: 35px;
   position: relative;
 }
-
-.mega-menu ul li:not(:last-child) ::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #ddd;
+.mega-menu ul:last-child li:last-of-type {
+  margin-bottom: 0;
 }
-
 .mega-menu ul li::before {
   content: "";
   position: absolute;
@@ -447,7 +432,7 @@ ul {
     padding: 0 30px;
   }
 
-  .mega-menu ul li:not(:nth-child(8))::after {
+  .mega-menu ul li::after {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -456,6 +441,9 @@ ul {
     height: 1px;
     background-color: #ddd;
   }
+}
+.mega-menu ul:last-child li:last-of-type::after {
+  display: none;
 }
 /* End Mega Menue */
 
@@ -604,5 +592,9 @@ ul {
     border-radius: 0;
   }
 }
-
+@keyframes moving-arrow {
+  100% {
+    transform: translatex(10px);
+  }
+}
 /* End Animation */
