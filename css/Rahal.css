@@ -574,8 +574,7 @@ ul {
 .Features {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-top);
-  height: 100vh;
-  margin-bottom: 300px;
+  overflow: hidden;
 }
 .Features .container {
   display: grid;
@@ -592,10 +591,8 @@ ul {
   background-color: white;
   position: relative;
   overflow: hidden;
-  height: 45%;
 }
 
-/* START image color overay  */
 .Features .container .box .img-holder::after {
   content: "";
   position: absolute;
@@ -621,7 +618,6 @@ ul {
 .Features .container .box:hover:last-child .img-holder::after {
   background-color: transparent;
 }
-/* end image color overay  */
 .Features .container .box .img-holder::before {
   content: "";
   position: absolute;
@@ -713,8 +709,53 @@ ul {
 }
 .Features .container .box:last-child .text-holders a::after {
   background-color: #2196f3;
-} /* End Features */
-
+}
+@media (max-width: 767px) {
+  .Features .container .box {
+    max-height: calc(100vh - 200px);
+  }
+  .Features .container .box .img-holder {
+    height: 30vh;
+  }
+  .Features .container .box .img-holder img {
+    position: relative;
+    top: -60px;
+  }
+  .Features .container .box .img-holder::before {
+    border-width: 0px 0px 50px 520px;
+    border-color: transparent transparent white transparent;
+  }
+  .Features .container .box:hover .img-holder::before {
+    border-width: 0px 520px 50px 0px;
+  }
+  .Features .container .box .text-holders {
+    height: 40vh;
+  }
+  .Features .container .box .text-holders h2 {
+    font-size: 25px;
+    margin: 10px auto;
+  }
+  .Features .container .box .text-holders h2::after {
+    bottom: -10px;
+    height: 3px;
+  }
+  .Features .container .box .text-holders p {
+    line-height: 1.1;
+    margin: 20px auto;
+  }
+  .Features .container .box .text-holders a {
+    padding: 5px 15px;
+    font-size: 20px;
+  }
+}
+/* End Features */
+/* Start Testimonials */
+/* End Testimonials */
+.testimonials {
+  background-color: var(--section-background);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
 /* Start Animation */
 @keyframes up-and-down {
   0%,
