@@ -109,14 +109,10 @@ ul {
 
 .main-title:hover::after {
   animation: move-left var(--main-transition) linear forwards;
-  -webkit-animation: move-left var(--main-transition) linear forwards;
-  -moz-animation: move-left var(--main-transition) linear forwards;
 }
 
 .main-title:hover::before {
   animation: move-right var(--main-transition) linear forwards;
-  -webkit-animation: move-right var(--main-transition) linear forwards;
-  -moz-animation: move-right var(--main-transition) linear forwards;
 }
 
 /* Start Header */
@@ -126,15 +122,9 @@ ul {
   -webkit-box-shadow: 0 0 10px #ddd;
   -moz-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
-  -webkit-box-shadow: 0 0 10px #ddd;
-  -moz-box-shadow: 0 0 10px #ddd;
 }
 
 .header .container {
-  display: flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -850,10 +840,6 @@ ul {
     80%,
     100% {
       transform: translateY(1px);
-      -webkit-transform: translateY(1px);
-      -moz-transform: translateY(1px);
-      -ms-transform: translateY(1px);
-      -o-transform: translateY(1px);
     }
 
     40%,
