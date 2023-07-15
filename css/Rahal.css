@@ -3,6 +3,10 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  --webkit-transition: var(--main-transition);
+  --moz-transition: var(--main-transition);
+  --ms-transition: var(--main-transition);
+  --o-transition: var(--main-transition);
 }
 
 :root {
@@ -769,8 +773,7 @@ ul {
   box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
     0px 2px 4px 0px rgb(0 0 0 / 12%);
 }
-.testimonials .container .box .imag-holder {
-}
+
 .testimonials .container .box .imag-holder img {
   background-color: #777;
   width: 100px;
@@ -780,7 +783,6 @@ ul {
   position: absolute;
   right: -10px;
   top: -50px;
-
 }
 .testimonials .container .box h2 {
   margin: 0;
