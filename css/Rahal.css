@@ -765,22 +765,22 @@ ul {
   background-color: white;
   padding: 20px;
   position: relative;
+  border-radius: 5px;
   box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
     0px 2px 4px 0px rgb(0 0 0 / 12%);
 }
 .testimonials .container .box .imag-holder {
+}
+.testimonials .container .box .imag-holder img {
   background-color: #777;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  position: absolute;
   border: 10px solid var(--section-background);
-  right: -30px;
+  position: absolute;
+  right: -10px;
   top: -50px;
-}
-.testimonials .container .box .imag-holder img {
-  max-width: 100%;
-  border-radius: 50%;
+
 }
 .testimonials .container .box h2 {
   margin: 0;
