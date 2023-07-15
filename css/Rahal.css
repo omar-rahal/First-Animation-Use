@@ -756,6 +756,44 @@ ul {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
 }
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.testimonials .container .box {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+.testimonials .container .box .imag-holder {
+  background-color: #777;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  border: 10px solid var(--section-background);
+  right: -30px;
+  top: -50px;
+}
+.testimonials .container .box .imag-holder img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.testimonials .container .box h2 {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+.testimonials .container .box p {
+  color: #777;
+  margin: 10px 0;
+}
+.testimonials .container .box .five-star i:not(:last-child) {
+  color: goldenrod;
+}
 /* Start Animation */
 @keyframes up-and-down {
   0%,
