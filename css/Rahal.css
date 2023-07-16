@@ -1,3 +1,5 @@
+
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -575,6 +577,10 @@ ul {
   transition: transform var(--main-transition),
     box-shadow var(--main-transition);
   transition: transform var(--main-transition),
+    box-shadow var(--main-transition),
+    -webkit-transform var(--main-transition),
+    -webkit-box-shadow var(--main-transition);
+  transition: transform var(--main-transition),
     box-shadow var(--main-transition), -webkit-transform var(--main-transition),
     -webkit-box-shadow var(--main-transition);
 }
@@ -715,7 +721,6 @@ ul {
   position: relative;
   overflow: hidden;
 }
-
 .Features .container .box .img-holder::after {
   content: "";
   position: absolute;
@@ -762,7 +767,6 @@ ul {
 .Features .container .box .img-holder img {
   max-width: 100%;
 }
-/* THE END OF IMAGE  */
 .Features .container .box .text-holders h2 {
   font-size: 40px;
   position: relative;
@@ -771,7 +775,6 @@ ul {
   width: fit-content;
   margin: 40px auto 0;
 }
-/* COLOR OF UNDERLINE H2 */
 .Features .container .box .text-holders h2::after {
   content: "";
   position: absolute;
@@ -787,7 +790,6 @@ ul {
 .Features .container .box:last-child .text-holders h2::after {
   background-color: #2196f3;
 }
-/* END COLOR OF UNDERLINE H2 */
 
 .Features .container .box .text-holders p {
   font-size: 20px;
@@ -1051,6 +1053,7 @@ ul {
   border: 2px solid var(--section-background);
 }
 .services .container {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px;
@@ -1061,23 +1064,33 @@ ul {
   text-align: center;
   position: relative;
   counter-increment: Services;
+  -webkit-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
   transition: var(--main-transition);
-  box-shadow: 2px 2px 10px #1786e02e;
+  -webkit-box-shadow: 2px 2px 10px #1786e02e;
+          box-shadow: 2px 2px 10px #1786e02e;
 }
 .services .container .box::after {
   content: "";
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: -4px;
   width: 0px;
   height: 4px;
   background-color: var(--main-color);
+  -webkit-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
   transition: var(--main-transition);
 }
 .services .container .box:hover {
-  transform: translateY(-10px);
-  box-shadow: 1px 1px 15px #1786e0;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 1px 1px 15px #1786e0;
+          box-shadow: 1px 1px 15px #1786e0;
 }
 .services .container .box:hover::after {
   width: 100%;
@@ -1085,19 +1098,27 @@ ul {
 .services .container .box i {
   margin: 30px 0;
   color: var(--main-color-alt);
+  -webkit-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
   transition: var(--main-transition);
 }
 .services .container .box:hover i {
-  transform: translatey(-10px);
+  -webkit-transform: translatey(-10px);
+      -ms-transform: translatey(-10px);
+          transform: translatey(-10px);
   color: var(--main-color);
 }
 .services .container .box h3 {
   color: var(--main-color);
   font-size: 25px;
+  -webkit-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
   transition: var(--main-transition);
 }
 .services .container .box:hover h3 {
-  transform: translatey(-10px);
+  -webkit-transform: translatey(-10px);
+      -ms-transform: translatey(-10px);
+          transform: translatey(-10px);
 }
 .services .container .box .info {
   position: relative;
@@ -1118,9 +1139,15 @@ ul {
   font-size: 28px;
   width: 100px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .services .container .box .info::before {
   content: "";
@@ -1131,7 +1158,11 @@ ul {
   height: 100%;
   background-color: rgb(255, 255, 255);
   z-index: 2;
-  transform: skewx(-25deg);
+  -webkit-transform: skewx(-25deg);
+      -ms-transform: skewx(-25deg);
+          transform: skewx(-25deg);
+  -webkit-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
   transition: var(--main-transition);
 }
 .services .container .box:hover .info::before {
