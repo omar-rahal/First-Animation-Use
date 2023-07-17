@@ -160,14 +160,20 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-animation: vibration var(--main-transition) linear;
+  animation: vibration var(--main-transition) linear;
+  -webkit-animation-iteration-count: 8;
+  animation-iteration-count: 7;
 }
 .header .logo:hover {
-  -webkit-animation: vibration var(--main-transition) linear;
+  -webkit-animation: vibrationn var(--main-transition) linear;
   animation: vibration var(--main-transition) linear;
   -webkit-animation-iteration-count: 7;
   animation-iteration-count: 7;
+  color: var(--main-color-alt);
 }
-@-webkit-keyframes vibration {
+/* 
+@--webkit-keyframes vibration {
   40% {
     margin-left: -5px;
   }
@@ -177,18 +183,8 @@ ul {
   100% {
     margin-left: 5px;
   }
-}
-@keyframes vibration {
-  40% {
-    margin-left: -5px;
-  }
-  70% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 5px;
-  }
-}
+} */
+
 @media (max-width: 767px) {
   .header .logo {
     width: 100%;
@@ -1268,16 +1264,120 @@ ul {
   left: 0;
   display: block;
   animation-duration: 1s;
-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-timing-function: 1s;
   height: 100%;
   background-color: var(--main-color);
+  display: none;
 }
 .our-skills:hover .container .skills .the-progress span {
   animation-name: skill;
+  display: block;
 }
 /* End SKILLS */
+/* Start How It Works */
+.how-it-wroks {
+  padding: var(--main-padding-top) 0;
+  background-color: var(--section-background);
+}
+.how-it-wroks .main-title:hover {
+  border-color: var(--section-background);
+}
+.how-it-wroks .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.how-it-wroks .container .image-holder {
+  width: 50%;
+}
+.how-it-wroks .container .image-holder img {
+  max-width: 100%;
+}
+
+.how-it-wroks .container .works-holder {
+  width: 50%;
+}
+
+@media (max-width: 991px) {
+  .how-it-wroks .container {
+    flex-direction: column;
+  }
+  .how-it-wroks .container > .image-holder {
+    margin-bottom: 50px;
+    width: 60%;
+  }
+
+  .how-it-wroks .container .works-holder {
+    width: 100%;
+  }
+}
+.how-it-wroks .container .works-holder .work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 30px 20px;
+  border: 3px solid white;
+  border-radius: 8px;
+  position: relative;
+  transition: var(--main-transition);
+  transition-delay: 0.4s;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.how-it-wroks .container .works-holder .work::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: #95959543;
+  transition: var(--main-transition);
+  border-radius: 8px;
+  z-index: -1;
+}
+.how-it-wroks .container .works-holder .work:hover {
+  border-color: var(--section-background);
+}
+.how-it-wroks .container .works-holder .work:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.how-it-wroks .container .works-holder .work .image-holder {
+  z-index: 2;
+  flex-basis: 30%;
+  margin-right: 20px;
+}
+.how-it-wroks .container .works-holder .work .image-holder img {
+  max-width: 90%;
+}
+
+.how-it-wroks .container .works-holder .work .text {
+  z-index: 3;
+}
+.how-it-wroks .container .works-holder .work .text h3 {
+  color: var(--main-color);
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+.how-it-wroks .container .works-holder .work .text p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 18px;
+}
+@media (max-width: 991px) {
+  .how-it-wroks .container .works-holder .work {
+    flex-direction: column;
+    text-align: center;
+  }
+  .how-it-wroks .container .works-holder .work .image-holder img {
+    max-width: 20%;
+  }
+}
+
+/* End How It Works */
 /* Start Animation */
 @-webkit-keyframes up-and-down {
   0%,
