@@ -1698,14 +1698,14 @@ ul {
     width: 100%;
     gap: 10px;
     height: 70px;
+    padding: 10px 30px ;
   }
   .lastet-events .dots {
     display: none;
   }
   .lastet-events .container .subscribe form input:first-child,
   .lastet-events .container .subscribe form input:last-child {
-    padding: 10px;
-    margin: 5px 10px;
+    padding: 10px ;
   }
 }
 
